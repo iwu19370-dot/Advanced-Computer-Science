@@ -5,7 +5,7 @@ public class Zombie {
     //rot
     boolean isDead = true;
     //human count
-    int humansEaten = 0;
+    int humansConsumed = 0;
 
     //main
     public static void main(String[] args) {
