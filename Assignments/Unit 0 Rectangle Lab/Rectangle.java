@@ -1,42 +1,53 @@
-public class Rectangle{
+public class Rectangle {
     // instance variables
     private int length;
     private int width;
 
     // constructors
-    public Rectangle(int Length, int Width) {
-        length = Length;
-        width = Width;
-        area = length * width;
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
     }
+
+    double area = length * width;
    
     // methods
     // getters
     public int getLength() {
         return length;
     }
+
     public int getWidth() {
         return width;
+
     }
+
     public int calculateArea() {
         return length * width;
     }
+
     public int calculatePerimeter() {
         return 2 * (length + width);
     }
 
+    public double calculateDiagonal() {
+        return Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
+    }
+
     // setters
-    public void setNewLength(int newLength){
+    public void setNewLength(int newLength) {
         length = newLength;
     }
+
     public void setNewWidth(int newWidth) {
         width = newWidth;
     }
-    }
+    
     public String toString() {
-        return "This rectangle has a length of " + length +" and a width of " + width + ". Its area is " + calculateArea() + ".";
+        return "This rectangle has a length of " + length + " and a width of " + width + ". Its area is " + calculateArea() + ".";
     }
-    public boolean equals(Rectangle other){
+
+    public boolean equals(Rectangle other) {
         return length == other.length && width == other.width && calculateArea() == other.calculateArea();
     }
 
