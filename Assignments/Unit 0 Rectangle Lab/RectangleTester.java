@@ -21,6 +21,12 @@ public class RectangleTester {
 
         System.out.println(rectangle.equals(rectangle2));
 
+        Point a = new Point(3, 4);
+        Point b = new Point(3, 7);
+        Point c = new Point(5, 4);
+        Point d = new Point(5, 7);
+
+
         
 
 
