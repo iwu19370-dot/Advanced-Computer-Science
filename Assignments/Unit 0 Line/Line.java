@@ -1,13 +1,13 @@
 public class Line {
-private int a;
-private int b;
-private int c;
+    private int a;
+    private int b;
+    private int c;
 
     public Line(int a, int b, int c) {
-       this.a = a;
-       this.b = b;
-       this.c = c;
-       double slope = calculateSlope();
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        double slope = calculateSlope();
 
     }
 
@@ -24,15 +24,15 @@ private int c;
     }
 
     public void setA(int a1) {
-        a1 = a;
+        a = a1;
     }
 
     public void setB(int b1) {
-        b1 = b;
+        b = b1;
     }
 
     public void setC(int c1) {
-        c1 = c;
+        c = c1;
     }
 
     public boolean isCoordinateOnLine(int x, int y) {
@@ -44,15 +44,15 @@ private int c;
     }
     
     public double calculateSlope() {
-        return (double) -(a / b);
+        return (double) -a / b;
     }
 
-    public int x() {
-        return (int) (Math.random() * 100);
+    public String toString() {
+        return " " + a + "x + " + b + "y + " + c + " = 0";
     }
 
-    public int y() {
-        return (int) (Math.random() * 100);
+    public boolean equals(Line other) {
+        return a == other.a && b == other.b && c == other.c;
     }
 
 }
