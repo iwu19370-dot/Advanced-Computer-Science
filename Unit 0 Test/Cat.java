@@ -16,6 +16,22 @@ public class Cat { // Made 'public' lowercase and changed to cat
 		return name;
 	}
 
+	public String getBreed() {
+		return breed;
+	}
+
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+	
+	public int getLivesRemaining() {
+		return livesRemaining;
+	}
+
+	public void setLivesRemaining(int number) {
+		livesRemaining = number;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
