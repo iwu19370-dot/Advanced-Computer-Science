@@ -12,8 +12,8 @@ public class Dog {
         this.ownerName = ownerName;
         this.age = age;
         this.dogId = dogId;
-        this.dogChar = generateDogChar(dogId);
-        this.dogTag = generateDogTag();
+        this.dogChar = PawesomeUtils.generateDogChar(dogId);
+        this.dogTag = PawesomeUtils.generateDogTag(this.dogId, this.dogChar);
         this.stillInFacility = true;
     }
 
@@ -22,8 +22,8 @@ public class Dog {
         this.ownerName = "Owner";
         this.age = 2;
         this.dogId = 438;
-        this.dogChar = generateDogChar(dogId);
-        this.dogTag = generateDogTag();
+        this.dogChar = PawesomeUtils.generateDogChar(dogId);
+        this.dogTag = PawesomeUtils.generateDogTag(this.dogId, this.dogChar);
         this.stillInFacility = true;
     }
 
@@ -47,20 +47,9 @@ public class Dog {
         return dogChar;
     }
 
-    public static char generateDogChar(int dogId) {
-        return (char) ('F'
-                + ((dogId % 10) + (((int) (dogId / 10)) % 10) + (((int) (dogId / 10) / 10)) % 10)
-                        % 10);
-    }
-
     public String getDogTag() {
         return dogTag;
     }
-
-    public String generateDogTag() {
-        return ("" + dogId) + dogChar;
-    }
-
 
     public boolean isStillInFacility() {
         return stillInFacility;
@@ -83,7 +72,7 @@ public class Dog {
     }
 
     public void setDogChar(char dogChar) {
-        this.dogChar = generateDogChar(dogId);
+        this.dogChar = PawesomeUtils.generateDogChar(dogId);
     }
 
     public void setDogTag(String dogTag) {
@@ -114,17 +103,6 @@ public class Dog {
         return name.equals(other.name) && ownerName.equals(other.ownerName) && age == other.age
                 && dogId == other.dogId && dogChar == other.dogChar && dogTag.equals(other.dogTag)
                 && stillInFacility == other.stillInFacility;
-    }
-
-    public void pickup(Dog dog, String personName) {
-        if (personName == ownerName) {
-            stillInFacility = false;
-        }
-    }
-
-    public void checkIn(Dog dog, String personName) {
-        stillInFacility = true;
-        personName = ownerName;
     }
 
 }

@@ -7,7 +7,7 @@ public class DogTester {
         one.setDogId(799);
         System.out.println(one.toString());
         System.out.println(one.getDogChar());
-        System.out.println(one.generateDogTag());
+        System.out.println(one.getDogTag());
         one.pickup(one, "Lily");
         System.out.println(one.toString());
     
@@ -17,7 +17,7 @@ public class DogTester {
         two.setDogId(439);
         System.out.println(two.toString());
         System.out.println(two.getDogChar());
-        System.out.println(two.generateDogTag());
+        System.out.println(two.getDogTag());
 
         Dog three = new Dog("Cake", "Bill", 4, 817);
         System.out.println(three.toString());
@@ -25,7 +25,7 @@ public class DogTester {
         three.setDogId(818);
         System.out.println(three.toString());
         System.out.println(three.getDogChar());
-        System.out.println(three.generateDogTag());
+        System.out.println(three.getDogTag());
 
         Dog four = new Dog();
         four.setAge(3);
