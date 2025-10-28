@@ -34,6 +34,7 @@ public class StringDemo{
 
         // "Juan Antonio Lopez"
         int firstSpace = fullName2.indexOf(""); // finds the index of the first space
+        System.out.println(firstSpace);
         String middleLastName = fullName2.substring(firstSpace); // create a substring starting at the first space to the end
         // " Antonio Lopez"
         System.out.println(middleLastName.indexOf("n")); // find index of n (return 2)

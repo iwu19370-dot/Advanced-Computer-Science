@@ -12,25 +12,58 @@ public class PawesomeUtils {
     }
 
     public static void checkIn(Dog dog, String personName) {
-        dog.setStillInFacility(true);
-        personName = dog.getOwnerName();
+        if (validateDogTag(dog) == true) {
+            dog.setStillInFacility(true);
+            personName = dog.getOwnerName();
+            System.out.println("The dog is checked in");
+        } else {
+            System.out.println("The dog is denied entry");
+        }
     }
 
     public static String generateDogTag(int dogId, char dogChar) {
         return ("" + dogId) + dogChar;
     }
 
-    public static void validateDogId(int dogId) {
-        if(100 <= dogId && dogId <= 999) {
-            return;
+    public static int validateDogId(int dogId) {
+        if (100 <= dogId && dogId <= 999) {
+            return dogId;
         } else {
-            dogId = (int) ((Math.random() + 100) * 10);
+            return (int) ((Math.random() * 900) + 100);
         }
     }
 
-    public static void validateDogTag(Dog dog) {
-        if(validateDogId(dogId) == dog.getDogId());
-        dog.getDogChar();
+    public static boolean validateDogTag(Dog dog) {
+        int dogId1 = validateDogId(dog.getDogId());
+        char dogChar1 = generateDogChar(dogId1);
+        String newDogTag = generateDogTag(dogId1, dogChar1);
+        if (newDogTag.equals(dog.getDogTag())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static int convertAgeToHumanAge(Dog dog) {
+        if (dog.getAge() == 1) {
+            return 15;
+        } 
+        if (dog.getAge() == 2) {
+            return 24;
+        } else {
+            return 24 + (dog.getAge() - 2) * 5;
+        }
+    }
+
+    public static int convertAgeToDogYears(int humanYears) {
+        if (humanYears <= 15) {
+            return 1;
+        } 
+        if (humanYears > 15 && humanYears <= 24) {
+            return 2;
+        } else {
+            return (humanYears - 24) / 5 + 2;
+        }
     }
 
 }

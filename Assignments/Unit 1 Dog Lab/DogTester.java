@@ -8,9 +8,13 @@ public class DogTester {
         System.out.println(one.toString());
         System.out.println(one.getDogChar());
         System.out.println(one.getDogTag());
-        one.pickup(one, "Lily");
+        PawesomeUtils.pickup(one, "Lily");
+        PawesomeUtils.checkIn(one, "Lily");
         System.out.println(one.toString());
-    
+        PawesomeUtils.validateDogId(one.getDogId());
+        PawesomeUtils.convertAgeToHumanAge(one);
+        System.out.println(PawesomeUtils.validateDogTag(one));
+
         Dog two = new Dog();
         System.out.println(two.toString());
         two.setAge(3);
@@ -18,6 +22,9 @@ public class DogTester {
         System.out.println(two.toString());
         System.out.println(two.getDogChar());
         System.out.println(two.getDogTag());
+        PawesomeUtils.validateDogId(two.getDogId());
+        two.setDogId(2);
+        PawesomeUtils.validateDogId(two.getDogId());
 
         Dog three = new Dog("Cake", "Bill", 4, 817);
         System.out.println(three.toString());
@@ -26,6 +33,7 @@ public class DogTester {
         System.out.println(three.toString());
         System.out.println(three.getDogChar());
         System.out.println(three.getDogTag());
+        PawesomeUtils.validateDogId(three.getDogId());
 
         Dog four = new Dog();
         four.setAge(3);
@@ -37,6 +45,14 @@ public class DogTester {
         four.setStillInFacility(false);
         System.out.println(four.toString());
 
+        System.out.println(PawesomeUtils.validateDogId(1));
+        System.out.println(PawesomeUtils.validateDogId(1000));
+        System.out.println(PawesomeUtils.validateDogId(105));
+
+        System.out.println(PawesomeUtils.convertAgeToDogYears(30));
+
+        Dog five = new Dog("Chocolate", "Cindy", 1, 6);
+        System.out.println(PawesomeUtils.validateDogTag(five));
     }
 
 }
