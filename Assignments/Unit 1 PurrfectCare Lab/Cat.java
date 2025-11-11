@@ -6,12 +6,12 @@ public class Cat {
     private char catChar;
     private boolean isHungry;
 
-    public Cat(String name, String ownerName, int  moodLevel, String catId) {
+    public Cat(String name, String ownerName, int moodLevel, String catId) {
         this.name = name;
         this.ownerName = ownerName;
-        this.moodLevel = validateMoodLevel();
-        this.catId = validateCatId();
-        this.catChar = generateCatChar();
+        this.catId = PurrfectUtils.validateCatId(catId);
+        this.moodLevel = PurrfectUtils.validateMoodLevel(moodLevel);
+        this.catChar = PurrfectUtils.generateCatChar(catId);
         this.isHungry = true;
     }
 
@@ -19,8 +19,8 @@ public class Cat {
         this.name = "Cat";
         this.ownerName = "Owner";
         this.moodLevel = 5;
-        this.catId = 479;
-        this.catChar = generateCatChar();
+        this.catId = "9994";
+        this.catChar = PurrfectUtils.generateCatChar(catId);
         this.isHungry = true;
     }
 
@@ -41,11 +41,11 @@ public class Cat {
     }
 
     public int getMoodLevel() {
-        return moodLevel
+        return moodLevel;
     }
 
     public void setMoodLevel(int moodLevel) {
-        this.moodLevel = PurrfectUtils.validateMoodLevel();
+        this.moodLevel = PurrfectUtils.validateMoodLevel(moodLevel);
     }
 
     public String getCatId() {
@@ -53,7 +53,7 @@ public class Cat {
     }
 
     public void setCatId(String catId) {
-        this.catId = catId;
+        this.catId = PurrfectUtils.validateCatId(catId);
     }
 
     public char getCatChar() {
@@ -70,5 +70,26 @@ public class Cat {
 
     public void setHungry(boolean isHungry) {
         this.isHungry = isHungry;
+    }
+
+    public String generateCatTag() {
+        return getCatId() + getCatChar();
+    }
+
+    public String toString() {
+        String n = getName().toUpperCase();
+        String h = PurrfectUtils.determineCatMood(this);
+        String j = "" + getName() + "";
+        String l = "" + generateCatTag() + "";
+        return "== ABOUT " + n + " ==\n" + j + " is a cat.\nTheir tag is " + l + ".\n" + h;
+    }
+
+    public boolean equals(Cat other) {
+        boolean a = generateCatTag().equals(other.generateCatTag());
+        boolean b = name.equals(other.name);
+        boolean c = ownerName.equals(other.ownerName);
+        boolean d = moodLevel == other.moodLevel;
+        boolean e = isHungry == other.isHungry;
+        return a && b && c && d && e;
     }
 }
