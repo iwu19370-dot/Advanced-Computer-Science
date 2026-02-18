@@ -1,11 +1,11 @@
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Unit4ExercisesTester {
     public static void main(String[] args) {
         int[] testArray = {5, 6, 45, 99, 13, 5, 6};
-        int[] testArray1 = {5, 13};
-        int[] testArray2 = {5, 45, 98};
+        int[] testArray1 = {0, 1, 0, 3};
+        int[] testArray2 = {5, 45, 98, 0};
 
         System.out.println(Unit4Exercises.matchingEndSequences(testArray, 1));
         System.out.println(Unit4Exercises.matchingEndSequences(testArray, 2));
@@ -52,8 +52,11 @@ public class Unit4ExercisesTester {
         System.out.println(Unit4Exercises.excludeTeenNumbers(list3));
 
         ArrayList<String> list4 = new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
-        ArrayList<String> list5 = new ArrayList<>(Arrays.asList("a", "y"));
+        ArrayList<String> list5 = new ArrayList<>(Arrays.asList(""));
         System.out.println(Unit4Exercises.appendY(list4));
         System.out.println(Unit4Exercises.appendY(list5));
+
+        ArrayList<Integer> list6 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        System.out.println(Unit4Exercises.squarePlus10(list6));
     }
 }

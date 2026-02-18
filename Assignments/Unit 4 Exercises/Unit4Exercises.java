@@ -58,7 +58,7 @@ public class Unit4Exercises {
     public static int[] generateNumberSequence(int start, int end) {
         // to-do: implement the method
         if (end < start) {
-            throw new IllegalArgumentException("End cannot be smaller that start");
+            return new int[0];
         }
         int anotherStart = start;
         int[] array = new int[end - start];
@@ -72,7 +72,7 @@ public class Unit4Exercises {
     // Method 4: fizzBuzz not done
     public static String[] fizzBuzz(int start, int end) {
         // to-do: implement the method
-        if (end < start) {
+        if (start > end) {
             throw new IllegalArgumentException("End cannot be smaller that start");
         }
         int anotherStart = start;
@@ -150,7 +150,8 @@ public class Unit4Exercises {
         // to-do: implement the method
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < strs.size(); i++) {
-            if (strs.get(i) != "y") {
+            String str1 = strs.get(i);
+            if (str1.equals("") || str1.charAt(str1.length() - 1) != 'y') {
                 list.add(strs.get(i) + "y");
             }
         }
@@ -160,7 +161,20 @@ public class Unit4Exercises {
     // Method 4: squarePlus10
     public static ArrayList<Integer> squarePlus10(ArrayList<Integer> nums) {
         // to-do: implement the method
-        return new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<Integer>(); 
+        ArrayList<String> listAsString = new ArrayList<String>();
+        for (int i = 0; i < nums.size(); i++) {
+            listAsString.add("" + nums.get(i));
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            String str = listAsString.get(i);
+            if (str.charAt(str.length() - 1) != '5' 
+                && str.charAt(str.length() - 1) != '6' 
+                && str.charAt(str.length() - 1) != '4') {
+                list.add(nums.get(i) * nums.get(i) + 10);
+            } 
+        }
+        return list;
     }
 
 }
