@@ -5,11 +5,16 @@ public class Mouse extends Animal {
     public void eat() {
         System.out.println("I am eating");
     }
+
     public void die() {
         System.out.println("The animal is dead.");
     }
 
-    public Mouse (int age, double bodyLength, String type, int hunger) {
+    public void feed() {
+        System.out.println("Mouse eats food.");
+    }
+
+    public Mouse (int age, String name, boolean isAlive, double weight, int speed, double bodyLength, String type, double hunger) {
         if (age >= 3) {
             throw new IllegalArgumentException("The mouse should be dead at this age.");
         }
@@ -17,7 +22,11 @@ public class Mouse extends Animal {
             throw new IllegalArgumentException("The mouse can't be longer than 7in.");
         }
         setAge(age);
-        setHunger(hunger);
+        setName(name);
+        setAlive(isAlive);
+        setWeight(weight);
+        setSpeed(speed);
+        this.hunger = hunger;
         this.type = type;
         this.bodyLength = bodyLength;
     }
@@ -33,7 +42,7 @@ public class Mouse extends Animal {
     }
 
     public String toString() {
-        return "This mouse is " + getAge() + " years old, is " + bodyLength + " long, is a " + type + ", and being full is " + getHunger();
+        return "This mouse is " + getAge() + " years old, is " + bodyLength + " long, is a " + type + ", and hunger level is " + hunger + ".";
     }
 
     public double getBodyLength() {
