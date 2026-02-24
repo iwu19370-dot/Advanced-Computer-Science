@@ -3,11 +3,11 @@ public class Flamingo extends Animal{
     private String location;
 
     public void eat() {
-        System.out.println("I am eating");
+        System.out.println("Flamingo is eating");
     }
 
     public void die() {
-        System.out.println("The animal is dead.");
+        System.out.println("Flamingo is dead.");
     }
 
     public void feed() {

@@ -13,8 +13,7 @@ public class Rectangle extends Polygon {
     }
 
     Rectangle() {
-        super(4);
-        new Rectangle(3,4);
+        this(3,4);
     }
 
     public String toString() {

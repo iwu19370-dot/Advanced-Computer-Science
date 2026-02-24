@@ -3,11 +3,11 @@ public class Mouse extends Animal {
     private String type;
 
     public void eat() {
-        System.out.println("I am eating");
+        System.out.println("Mouse is eating");
     }
 
     public void die() {
-        System.out.println("The animal is dead.");
+        System.out.println("Mouse is dead.");
     }
 
     public void feed() {

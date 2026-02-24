@@ -13,8 +13,7 @@ public class Triangle extends Polygon {
     }
 
     Triangle() {
-        super(3);
-        new Triangle(3,4);
+        this(3,4);
     }
 
     public String toString() {
