@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cnf024vn731jd"]
+
+[node name="Main" type="Node2D" unique_id=375209227]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=2049654953]
+
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=366478495]
+offset_right = 40.0
+offset_bottom = 40.0

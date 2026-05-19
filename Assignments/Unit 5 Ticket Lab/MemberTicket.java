@@ -10,7 +10,7 @@ public class MemberTicket extends Ticket {
     }
 
     public double getTotalPrice() {
-        return (getBasePrice() * ticketCount) + getTax() * (getBasePrice() * ticketCount);
+        return ((getBasePrice() * ticketCount) + getTax() * (getBasePrice() * ticketCount)) * 0.75;
     }
 
     public void setTotalPrice(double totalPrice) {
@@ -44,6 +44,7 @@ public class MemberTicket extends Ticket {
         super.printTicketDetails();
         printTicketType();
         printPrice();
+        printMemberBenefits();
         printCancellationPolicy();
     }
 

@@ -1,0 +1,21 @@
+Challenge Instructions
+1. Compare cards at position 0 and 1
+2. Swap cards at position 0 and 1 if card at position 1 < card at position 0
+3. Compare cards at position 1 and 2
+4. Swap cards at position 1 and 2 if card at position 2 < card at position 1. If the 2 cards are swapped, go back to step 1
+5. Compare cards at position 2 and 3
+6. Swap cards at position 2 and 3 if card at position 3 < card at position 2. If the 2 cards are swapped, go back to step 1
+7. Compare cards at position 3 and 4
+8. Swap cards at position 3 and 4 if card at position 4 < card at position 9. If the 2 cards are swapped, go back to step 1
+
+Challenge Instructions
+1. Compare cards at position 0 and 1
+2. Store largest number
+3. Compare stored number to card at position 2 and if card at position 2 greater, than store card at position 2 and move original back
+4. Compare stored number to card at position 3 and if card at position 3 greater, than store card at position 3 and move original back
+5. Compare stored number to card at position 4 and if card at position 4 greater, then keep 4 there and move original back
+6. Put stored number in position 4 and shift left the cards right of the the stored num's original position, but left of the cards I already locked in/the largest number.
+7. Repeat, but now skip step 5 and store next num in position 3 instead of 4 (In code, I'll make i the length of array - 1, then when I finish step 6, I'll do i--)
+8. Repeat, but now skip step 4 and 5 and store next num in position 2 instead of 3
+9. Repeat step 1
+10. Swap if cards at position 0 > cards at position 1
