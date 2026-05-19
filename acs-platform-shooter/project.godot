@@ -12,6 +12,7 @@ config_version=5
 
 config/name="My Shooter"
 config/description="A 2D platform shooter built in ACS Unit 6."
+run/main_scene="uid://cnf024vn731jd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
