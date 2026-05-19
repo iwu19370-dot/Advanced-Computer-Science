@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779220215
+::res://::1779222051
 icon.svg::CompressedTexture2D::5682774365671141519::1779219105::1779219119::1::::<><><>0<>0<>758f5666f8f768f5970d9c83557962d5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1779219366
 ::res://assets/audio/::1779219366
@@ -59,6 +59,9 @@ Box.png::CompressedTexture2D::1636638554037449667::1779219354::1779219364::1::::
 ExitDoor.png::CompressedTexture2D::2249737470427035104::1779219354::1779219364::1::::<><><>0<>0<>b8875c96b897273ef9afd706409f3d66<>res://.godot/imported/ExitDoor.png-b04afe0012ef88572385767d20ec382d.ctex::
 Grass1.png::CompressedTexture2D::6273992361949843915::1779219354::1779219364::1::::<><><>0<>0<>5eaa2b0052ba0c703004f4ad2b10ac1e<>res://.godot/imported/Grass1.png-30a04a88466169a91f1cf1ca2c6c11fb.ctex::
 ::res://autoload/::1779219580
-::res://scenes/::1779219561
-main.tscn::PackedScene::5697185920958116829::1779220366::0::1::::<><><>0<>0<><>::
+::res://scenes/::1779222051
+main.tscn::PackedScene::5697185920958116829::1779221208::0::1::::<><><>0<>0<><>::
+Player.tscn::PackedScene::4475851021763045396::1779221678::0::1::::<><><>0<>0<><>::uid://ccate38dt0npp::::res://assets/character/idle/Idle_00.png<>uid://c47lrrd8d5tmw::::res://assets/character/idle/Idle_01.png<>uid://cbstakbvbvwxa::::res://assets/character/idle/Idle_02.png<>uid://d1gedd2576n1c::::res://assets/character/idle/Idle_03.png<>uid://btjvrwqc1d5rd::::res://assets/character/idle/Idle_04.png<>uid://dptpi224m6jbb::::res://assets/character/idle/Idle_06.png<>uid://c2iwifsr5dchw::::res://assets/character/idle/Idle_05.png<>uid://bsqrulot4s6lc::::res://assets/character/idle/Idle_07.png<>uid://l48fu7x6g7wo::::res://assets/character/idle/Idle_09.png<>uid://k70td8oh7we6::::res://assets/character/idle/Idle_08.png<>uid://bic5j53ilhveq::::res://assets/character/idle/Idle_10.png<>uid://dgme4sxfrrrgw::::res://assets/character/idle/Idle_12.png<>uid://t1oguhbpmgxe::::res://assets/character/idle/Idle_11.png<>uid://d2teia44tb7vk::::res://assets/character/idle/Idle_13.png
+World.tscn::PackedScene::1704366258446868397::1779222051::0::1::::<><><>0<>0<><>::uid://b41eu26yb3if1::::res://scenes/Player.tscn
 ::res://scripts/::1779219574
+player.gd::GDScript::7082506805451767407::1779222103::0::1::::<>CharacterBody2D<><>0<>0<><>::
