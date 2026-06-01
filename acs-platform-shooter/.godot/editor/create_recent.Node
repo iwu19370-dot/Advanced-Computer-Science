@@ -1,7 +1,0 @@
-ColorRect
-Camera2D
-CollisionShape2D
-AnimatedSprite2D
-CharacterBody2D
-CanvasLayer
-Node2D
